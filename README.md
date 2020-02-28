@@ -1,6 +1,6 @@
 # ChromeOS Playbook
 
-> 👨‍💻 Ansible Playbook that sets up ChromeOS for a full-stack developer.
+> 👨‍💻 • Ansible Playbook that sets up ChromeOS for a full-stack developer.
 
 This Playbook will **automatically configure and install**:
 
