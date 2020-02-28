@@ -16,7 +16,8 @@ This **[Ansible](https://www.ansible.com/)** Playbook will ***automatically conf
 
 ## Install
 
-**First [enable Linux](https://support.google.com/chromebook/answer/9145439?hl=en)** via the system settings dialogue **then copy** the following commands **into** a `🔣`**[`Terminal`](https://support.google.com/chromebook/thread/565904)**:
+1. **First [enable Linux](https://support.google.com/chromebook/answer/9145439?hl=en)** via the system settings dialogue
+1. **then copy** the following commands **into** a `🔣`**[`Terminal`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
 # Temporary bugfix, 28.02.2020
