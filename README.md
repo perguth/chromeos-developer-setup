@@ -14,6 +14,8 @@ This Playbook will **automatically configure and install**:
 - [x] [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) to improve `git diff`
 - [x] [Privoxy](https://www.privoxy.org/) for the [yggdrasil-chromeos](https://github.com/perguth/yggdrasil-chromeos) Chrome Extension.
 
+## Install
+
 After [enabling Linux](https://support.google.com/chromebook/answer/9145439?hl=en) **copy** the following commands **into a terminal** window:
 
 ```bash
