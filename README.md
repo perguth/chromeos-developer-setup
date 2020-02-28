@@ -1,6 +1,8 @@
 # Chrome OS Playbook
 
-> 👨‍💻 • This **[Ansible](https://www.ansible.com/)** Playbook will ***automatically configure*** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)**. Helpful for **[full stack](https://g.co/kgs/3YJzcA)** development tasks!
+This **[Ansible](https://www.ansible.com/)** Playbook will ***automatically configure*** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)**. Helpful for **[full stack](https://g.co/kgs/3YJzcA)** development tasks! 👨‍💻
+
+It installs and/or configures:
 
 - Git ([username](https://help.github.com/en/github/using-git/setting-your-username-in-git), [email](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address), [password cache](https://help.github.com/en/github/using-git/caching-your-github-password-in-git))
 - some utilities ([htop](https://hisham.hm/htop/), [iperf3](https://iperf.fr/), [nano](https://www.nano-editor.org/), [nmap](https://nmap.org/), [nload](https://github.com/rolandriegel/nload), [mosh](https://mosh.org/), [screen](https://www.gnu.org/software/screen/), [tmux](https://github.com/tmux/tmux/wiki))
