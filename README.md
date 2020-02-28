@@ -20,7 +20,7 @@ It installs and/or configures: 👨‍💻
 1. **then copy** the following commands into a `🔣`**[`Terminal`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
-# Temporary bugfix as of 02/28/2020
+# Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
 
 # Install Ansible
