@@ -4,15 +4,15 @@
 
 This **[Ansible](https://www.ansible.com/)** Playbook will ***automatically configure*** your **[Chromebook](https://www.google.com/chromebook/shop/)** for your daily **[full-stack development](https://g.co/kgs/3YJzcA)** tasks:
 
-- [x] Git ([username](https://help.github.com/en/github/using-git/setting-your-username-in-git), [email](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address), [password cache](https://help.github.com/en/github/using-git/caching-your-github-password-in-git))
-- [x] some utilities ([htop](https://hisham.hm/htop/), [iperf3](https://iperf.fr/), [nano](https://www.nano-editor.org/), [nmap](https://nmap.org/), [nload](https://github.com/rolandriegel/nload), [mosh](https://mosh.org/), [screen](https://www.gnu.org/software/screen/), [tmux](https://github.com/tmux/tmux/wiki))
-- [x] [Yggdrasil Network](https://yggdrasil-network.github.io/) ([peers](https://github.com/yggdrasil-network/public-peers) need to be added manually)
-- [x] [NodeJS](https://nodejs.org/) and [Yarn](https://yarnpkg.com/)
-- [x] [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
-- [x] [Golang](https://golang.org/)
-- [x] [Rust](https://www.rust-lang.org/)
-- [x] [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) to improve `git diff`
-- [x] [Privoxy](https://www.privoxy.org/) for the **[Yggdrasil extension](https://github.com/perguth/yggdrasil-chromeos)** for [Google Chrome](https://www.google.com/chrome/).
+- Git ([username](https://help.github.com/en/github/using-git/setting-your-username-in-git), [email](https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/setting-your-commit-email-address), [password cache](https://help.github.com/en/github/using-git/caching-your-github-password-in-git))
+- some utilities ([htop](https://hisham.hm/htop/), [iperf3](https://iperf.fr/), [nano](https://www.nano-editor.org/), [nmap](https://nmap.org/), [nload](https://github.com/rolandriegel/nload), [mosh](https://mosh.org/), [screen](https://www.gnu.org/software/screen/), [tmux](https://github.com/tmux/tmux/wiki))
+- [Yggdrasil Network](https://yggdrasil-network.github.io/) ([peers](https://github.com/yggdrasil-network/public-peers) need to be added manually)
+- [NodeJS](https://nodejs.org/) and [Yarn](https://yarnpkg.com/)
+- [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
+- [Golang](https://golang.org/)
+- [Rust](https://www.rust-lang.org/)
+- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) to improve `git diff`
+- [Privoxy](https://www.privoxy.org/) for the **[Yggdrasil extension](https://github.com/perguth/yggdrasil-chromeos)** for [Google Chrome](https://www.google.com/chrome/).
 
 ## Install
 
