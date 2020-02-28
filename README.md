@@ -36,4 +36,4 @@ cd chromeos-playbook
 ansible-playbook playbook.yml
 ```
 
-You may need to **restart Linux**.
+You can now simply **restart Linux** and enjoy ✌️
