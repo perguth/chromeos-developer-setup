@@ -41,7 +41,7 @@
   - block: # Utilities
     - name: '[Utilities] Install'
       apt:
-        name: ['htop', 'iperf3', 'nano', 'nmap', 'nload', 'mosh', 'screen', 'tmux']
+        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'screen', 'tmux']
         update_cache: yes
 
   - block: # Yggdrasil Network
