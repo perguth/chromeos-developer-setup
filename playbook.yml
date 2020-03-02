@@ -1,6 +1,6 @@
 ---
 
-- name: This will compute a while. Good read: https://mafinto.sh/blog/
+- name: 'This will compute a while. Good read: https://mafinto.sh/blog/'
   hosts: localhost
   connection: local
 
@@ -41,8 +41,37 @@
   - block: # Utilities
     - name: '[Utilities] Install'
       apt:
-        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'screen', 'tmux']
+        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux']
         update_cache: yes
+
+  - block: # UFW Firewall
+    - name: '[UFW] Allow SSH'
+      ufw:
+        rule: allow
+        port: '22'
+        proto: tcp
+    - name: '[UFW] Allow MOSH'
+      ufw:
+        rule: allow
+        port: 60000:61000
+        proto: udp
+    - name: '[UFW] Allow HTTPS'
+      ufw:
+        rule: allow
+        port: '443'
+        proto: tcp
+    - name: '[UFW] Allow Yggdrasil traffic'
+      ufw:
+        rule: allow
+        direction: in
+        interface: tun0
+    - name: '[UFW] Default deny incoming'
+      ufw:
+        rule: deny
+        direction: in
+    - name: '[UFW] Enable'
+      ufw:
+        state: enabled
 
   - block: # Yggdrasil Network
     - name: '[Yggdrasil] Add GPG key'
