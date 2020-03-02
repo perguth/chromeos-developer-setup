@@ -1,6 +1,6 @@
 ---
 
-- name: Setup ChromeOS Linux
+- name: This will compute a while. Good read: https://mafinto.sh/blog/
   hosts: localhost
   connection: local
 
