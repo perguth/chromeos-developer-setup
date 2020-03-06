@@ -21,7 +21,10 @@ It installs and/or configures: 👨‍💻
 
 ```bash
 # Temporary bugfix as of `02/28/2020`
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
+# Currently unclear if the fix prevents Linux from booting again after a restart.
+# sudo vi /etc/apt/sources.list.d/cros.list
+# and comment out adding a # to the beginning of the line.
 
 # Install Ansible
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
