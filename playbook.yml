@@ -5,7 +5,7 @@
   connection: local
 
   vars_prompt:
-  - name: username
+  - name: git_username
     prompt: '[Git] Set name'
     private: no
   - name: email
@@ -18,13 +18,18 @@
   become: true
   tasks:
 
+  - name: Determine local username.
+    become: false
+    local_action: command whoami
+    register: local_username
+
   - block: # Configure Git
     - name: '[Git] Set username'
       become: false
       git_config:
         name: user.name
         scope: global
-        value: '{{username}}'
+        value: '{{git_username}}'
     - name: '[Git] Set email'
       become: false
       git_config:
@@ -107,7 +112,15 @@
         update_cache: no
     - name: '[Docker] Install Docker'
       apt: update_cache=yes name=docker-ce
-    - name: 'Install Docker Compose'
+    - name: '[Docker] Create docker group.'
+      group:
+        name: docker
+        state: present
+    - name: '[Docker] Add user to docker group.'
+      user:
+        name: '{{local_username.stdout}}'
+        groups: docker
+    - name: '[Docker] Install Docker Compose'
       get_url:
         url: https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64
         checksum: sha256:cfb3439956216b1248308141f7193776fcf4b9c9b49cbbe2fb07885678e2bb8a
