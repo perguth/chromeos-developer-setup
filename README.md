@@ -1,5 +1,7 @@
 # Chrome OS Playbook
 
+<sup>*🔬 **Enabled** by [THINGYLABS](https://BLOG.thingylabs.io/)!*</sup>
+
 This **[Ansible](https://www.ansible.com/)** Playbook will ***automatically configure*** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)**. Helpful for **[full stack](https://g.co/kgs/3YJzcA)** development!
 
 It installs and/or configures: 👨‍💻 [AWESOME.md](AWESOME.md)
