@@ -1,4 +1,4 @@
-# Chrome OS Playbook
+# Chrome OS setup
 
 <sup>***Enabled** by 🔬<b>[`THINGYLABS`](https://BLOG.thingylabs.io/)</b>*</sup>
 
