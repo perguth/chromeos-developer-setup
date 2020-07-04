@@ -38,10 +38,8 @@
         value: '{{email}}'
     - name: '[Git] Set password timeout'
       become: false
-      git_config:
-        name: credential.helper
-        scope: global
-        value: 'cache --timeout={{timeout}}'
+      shell:
+        cmd: git config --global credential.helper cache && git config --global credential.helper 'cache --timeout={{timeout}}'
 
   - block: # Utilities
     - name: '[Utilities] Install'
