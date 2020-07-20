@@ -9,7 +9,7 @@ It installs and/or configures: 👨‍💻 [AWESOME.md](AWESOME.md)
 
 ## Install
 
-1. **First [enable Linux](https://support.google.com/chromebook/answer/9145439)**.
+1. **First `🛠️`[`enable Linux`](https://support.google.com/chromebook/answer/9145439)**.
 1. **then copy** the following commands into a `🔣`**[`Terminal`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
