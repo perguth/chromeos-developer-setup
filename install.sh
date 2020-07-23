@@ -1,4 +1,4 @@
-	#!/bin/sh
+#!/bin/sh
   
 # Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
