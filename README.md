@@ -8,7 +8,7 @@ Helpful for ***[🎸 REAL\* full stack development](https://www.youtube.com/watc
 It installs and/or configures: 👨‍💻 [AWESOME.md](AWESOME.md)
 
 
-## Install
+## Usage
 
 1. **First `🛠️`[`enable Linux`](https://support.google.com/chromebook/answer/9145439)**.
 1. **then copy** the following commands into a `🔣`**[`Terminal`](https://support.google.com/chromebook/thread/565904)**:
