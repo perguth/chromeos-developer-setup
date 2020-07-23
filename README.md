@@ -1,4 +1,4 @@
-# Chrome OS setup
+# Pixelbook and Chrome OS setup script
 
 <sup>***Enabled** by 🔬<b>[`THINGYLABS`](https://BLOG.thingylabs.io/)</b>*</sup>
 
