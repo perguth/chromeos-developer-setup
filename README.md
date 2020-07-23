@@ -13,7 +13,7 @@ It installs and/or configures: 👨‍💻 [AWESOME.md](AWESOME.md)
 1. **then copy** the following commands into a `🔣`**[`Terminal`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-playbook/master/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-playbook/master/setup.sh)"
 ```
 
 You can now simply **restart Linux** and enjoy ✌️
