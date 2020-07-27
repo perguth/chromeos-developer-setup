@@ -11,7 +11,7 @@ It installs and/or configures: 👨‍💻 [AWESOME.md](AWESOME.md)
 ## Usage
 
 1. **First `🛠️`[`enable Linux`](https://support.google.com/chromebook/answer/9145439)**.
-1. **then copy** the following commands into a `🔣`**[`termina` (\[bash-speak\]: "terminal")](https://support.google.com/chromebook/thread/565904)**:
+1. **then copy** the following commands into a `🔣`**[`termina`](https://support.google.com/chromebook/thread/565904)**` ([bash-speak]: terminal)`:
 
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-playbook/master/setup.sh)"
