@@ -80,7 +80,7 @@
         id: 72ECF46A56B4AD39C907BBB71646B01B86E50310
     - name: '[NodeJS] Add NodeJS repository'
       apt_repository:
-        repo: deb http://deb.nodesource.com/node_12.x stretch main
+        repo: deb http://deb.nodesource.com/node_16.x stretch main
         filename: nodesource
         update_cache: no
     - name: '[NodeJS] Add Yarn repository'
