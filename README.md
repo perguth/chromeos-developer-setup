@@ -13,7 +13,7 @@ It installs and configures:
 - [Golang](https://golang.org/)
 - [Rust](https://www.rust-lang.org/)
 - [`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy) to improve `git diff`
-- [Privoxy](https://www.privoxy.org/) as required by the **[Yggdrasil extension](https://github.com/perguth/yggdrasil-chromeos)** for [Google Chrome](https://www.google.com/chrome/)
+- [Privoxy](https://www.privoxy.org/) as required by the **[Yggdrasil extension](https://github.com/perguth/yggdrasil-chromeos)** browser extension
 
 
 ## Usage
