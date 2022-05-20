@@ -18,10 +18,14 @@
   become: true
   tasks:
 
-  - name: Determine local username.
+  - name: Determine local username
     become: false
     local_action: command whoami
     register: local_username
+  - name: Determine distribution codename
+    become: false
+    local_action: command lsb_release -cs
+    register: codename
 
   - block: # Configure Git
     - name: '[Git] Set username'
@@ -80,7 +84,7 @@
         id: 72ECF46A56B4AD39C907BBB71646B01B86E50310
     - name: '[NodeJS] Add NodeJS repository'
       apt_repository:
-        repo: deb http://deb.nodesource.com/node_16.x stretch main
+        repo: deb http://deb.nodesource.com/node_16.x {{codename.stdout}} main
         filename: nodesource
         update_cache: no
     - name: '[NodeJS] Add Yarn repository'
@@ -105,7 +109,7 @@
         id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
     - name: '[Docker] Add Docker repository'
       apt_repository:
-        repo: deb https://download.docker.com/linux/debian stretch stable
+        repo: deb https://download.docker.com/linux/debian {{codename.stdout}} stable
         filename: docker
         update_cache: no
     - name: '[Docker] Install Docker'
