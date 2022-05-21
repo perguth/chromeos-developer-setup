@@ -128,22 +128,29 @@
       user:
         name: '{{local_username.stdout}}'
         groups: docker
+    - name: '[Docker] Determine download URL'
+      shell: echo "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)"
+      register: docker_compose_url
     - name: '[Docker] Install Docker Compose'
       get_url:
-        url: https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64
-        checksum: sha256:cfb3439956216b1248308141f7193776fcf4b9c9b49cbbe2fb07885678e2bb8a
+        url: '{{docker_compose_url.stdout}}'
         mode: 0755
         dest: /usr/local/bin/docker-compose
 
   - block: # Golang
+    - name: '[Golang] Determine latest version'
+      uri:
+        url: https://go.dev/VERSION?m=text
+        return_content: yes
+      register: golang_version
     - name: '[Golang] Get tarball'
       get_url:
-        url: https://dl.google.com/go/go1.18.2.linux-amd64.tar.gz
+        url: https://dl.google.com/go/{{golang_version.content}}.linux-amd64.tar.gz
         checksum: sha256:e54bec97a1a5d230fc2f9ad0880fcbabb5888f30ed9666eca4a91c5a32e86cbc
         dest: /usr/local/src
     - name: '[Golang] Extract'
       unarchive:
-        src: /usr/local/src/go1.14.linux-amd64.tar.gz
+        src: /usr/local/src/{{golang_version.content}}.linux-amd64.tar.gz
         copy: no
         dest: /usr/local
     - name: '[Golang] Configure `~/.bashrc`'
@@ -160,13 +167,14 @@
     - name: '[Rust] Get installer'
       become: false
       get_url:
-        url: https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init
-        checksum: sha256:3dc5ef50861ee18657f9db2eeb7392f9c2a6c95c90ab41e45ab4ca71476b4338
+        url: https://sh.rustup.rs
         mode: 0755
         dest: /tmp/rustup-init
     - name: '[Rust] Install'
       become: false
-      command: /tmp/rustup-init -y
+      command: |
+        /tmp/rustup-init -y
+        rm /tmp/rustup-init
       args:
         creates: ~/.rustup
     - name: '[Rust] Add to PATH'
@@ -174,6 +182,30 @@
       lineinfile:
         path: ~/.bashrc
         line: source $HOME/.cargo/env
+
+  - block: # Deno
+    - name: '[Deno] Get installer'
+      become: false
+      get_url:
+        url: https://github.com/denoland/deno/releases/latest/download/deno-x86_64-unknown-linux-gnu.zip
+        mode: 0755
+        dest: /tmp/deno.zip
+    - name: '[Deno] Create directory'
+      become: false
+      file:
+        path: ~/.deno/bin
+        state: directory
+    - name: '[Deno] Extract binary'
+      become: false
+      unarchive:
+        src: /tmp/deno.zip
+        dest: ~/.deno/bin
+        mode: 0755
+    - name: '[Deno] Add to PATH'
+      become: false
+      lineinfile:
+        path: ~/.bashrc
+        line: export PATH=$HOME/.deno/bin:$PATH
 
   - block: # Nicer Git diff
     - name: '[Git] Install `diff-so-fancy`'
