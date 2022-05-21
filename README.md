@@ -1,4 +1,4 @@
-# Chrome OS developer setup script
+# Chrome OS developer setup
 
 This will **automatically configure** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)**.
 
@@ -10,7 +10,8 @@ It installs and configures:
 - **[Docker](https://www.docker.com/)** and **[Docker Compose](https://docs.docker.com/compose/)**
 - **[Golang](https://golang.org/)**
 - **[Rust](https://www.rust-lang.org/)**
-- **[`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy)** to improve `git diff`
+- **[Deno](https://deno.land/)**
+- **[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)** to improve `git diff`
 - **[Yggdrasil Network](https://yggdrasil-network.github.io/)** ([peers](https://github.com/yggdrasil-network/public-peers) need to be added manually)
 - A locked down [Privoxy](https://www.privoxy.org/) in order to make the [Yggdrasil browser extension](https://github.com/perguth/yggdrasil-chromeos) work
 
@@ -21,7 +22,7 @@ It installs and configures:
 1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-playbook/master/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
 ```
 
 You can now simply **restart Linux** (not Chrome OS) and enjoy ✌️
