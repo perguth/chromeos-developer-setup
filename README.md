@@ -12,7 +12,7 @@ It installs and configures:
 - **[Rust](https://www.rust-lang.org/)**
 - **[Deno](https://deno.land/)**
 - **[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)** to improve `git diff`
-- **[Yggdrasil Network](https://yggdrasil-network.github.io/)** (Not connected to the network. [Peers](https://github.com/yggdrasil-network/public-peers) need to be added manually but be aware that would [expose your machine](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network))
+- **[Yggdrasil Network](https://yggdrasil-network.github.io/)** (Not connected to the network. [Peers](https://github.com/yggdrasil-network/public-peers) need to be added manually but [be aware of security implications](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network))
 - A locked down [Privoxy](https://www.privoxy.org/) in order to make the [Yggdrasil browser extension](https://github.com/perguth/yggdrasil-chromeos) work
 
 
