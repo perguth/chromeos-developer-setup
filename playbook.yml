@@ -166,7 +166,7 @@
       become: false
       get_url:
         url: https://static.rust-lang.org/rustup/dist/x86_64-unknown-linux-gnu/rustup-init
-        checksum: sha256:sha256:3dc5ef50861ee18657f9db2eeb7392f9c2a6c95c90ab41e45ab4ca71476b4338
+        checksum: sha256:3dc5ef50861ee18657f9db2eeb7392f9c2a6c95c90ab41e45ab4ca71476b4338
         mode: 0755
         dest: /tmp/rustup-init
     - name: '[Rust] Install'
