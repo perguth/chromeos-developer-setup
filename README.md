@@ -1,4 +1,4 @@
-# Pixelbook and Chrome OS setup script
+# Chrome OS developer setup script
 
 This will **automatically configure** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)**.
 
