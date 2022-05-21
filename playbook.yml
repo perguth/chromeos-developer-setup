@@ -96,11 +96,22 @@
       apt:
         name: ['nodejs', 'yarn']
         update_cache: yes
+    - name: '[NodeJS] Set package root of NPM to the home directory'
+      become: false
+      lineinfile:
+        path: ~/.npmrc
+        line: prefix = "$HOME/.npm"
+        create: yes
+    - name: '[NodeJS] Add NPM to PATH'
+      become: false
+      lineinfile:
+        path: ~/.bashrc
+        line: export PATH="$HOME/.npm/bin:$PATH"
     - name: '[NodeJS] Add Yarn to PATH'
       become: false
       lineinfile:
         path: ~/.bashrc
-        line: export PATH="$(yarn global bin):$PATH"
+        line: export PATH="$HOME/.yarn/bin:$PATH"
 
   - block: # Docker and Docker Compose
     - name: '[Docker] Add Docker GPG key'
