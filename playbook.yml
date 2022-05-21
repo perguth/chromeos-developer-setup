@@ -150,8 +150,8 @@
   - block: # Golang
     - name: '[Golang] Get tarball'
       get_url:
-        url: https://dl.google.com/go/go1.14.linux-amd64.tar.gz
-        checksum: sha256:08df79b46b0adf498ea9f320a0f23d6ec59e9003660b4c9c1ce8e5e2c6f823ca
+        url: https://dl.google.com/go/go1.18.2.linux-amd64.tar.gz
+        checksum: sha256:e54bec97a1a5d230fc2f9ad0880fcbabb5888f30ed9666eca4a91c5a32e86cbc
         dest: /usr/local/src
     - name: '[Golang] Extract'
       unarchive:
