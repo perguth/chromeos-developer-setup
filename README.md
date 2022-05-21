@@ -11,7 +11,6 @@ It installs and configures:
 - **[Golang](https://golang.org/)**
 - **[Rust](https://www.rust-lang.org/)**
 - **[`diff-so-fancy`](https://github.com/so-fancy/diff-so-fancy)** to improve `git diff`
-- **[Theia](https://www.theia-ide.org/)** start script from [here](https://gist.github.com/perguth/a9b4758f91212c5fb18b41be0d1eac69). It will start Theia on [penguin:4200](http://penguin:4200) or [penguin.linux.test:4200](http://penguin.linux.test:4200)
 - **[Yggdrasil Network](https://yggdrasil-network.github.io/)** ([peers](https://github.com/yggdrasil-network/public-peers) need to be added manually)
 - A locked down [Privoxy](https://www.privoxy.org/) in order to make the [Yggdrasil browser extension](https://github.com/perguth/yggdrasil-chromeos) work
 
