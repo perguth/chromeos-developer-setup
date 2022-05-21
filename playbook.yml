@@ -140,13 +140,6 @@
         mode: 0755
         dest: /usr/local/bin/docker-compose
 
-  - block: # Install Theia script
-    - name: '[Theia] Install Theia start script'
-      get_url:
-        url: https://gist.githubusercontent.com/perguth/a9b4758f91212c5fb18b41be0d1eac69/raw/ff601f141a6b36696ea8cc44b92c90f7d362aa93/theia
-        mode: 0755
-        dest: /usr/local/bin/theia
-
   - block: # Golang
     - name: '[Golang] Get tarball'
       get_url:
