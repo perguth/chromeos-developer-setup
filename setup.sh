@@ -14,3 +14,7 @@ cd chromeos-playbook
 
 # Run playbook
 ansible-playbook playbook.yml
+
+# Clean up
+cd ..
+rm -rf chromeos-playbook
