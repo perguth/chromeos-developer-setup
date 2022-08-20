@@ -146,7 +146,6 @@
     - name: '[Golang] Get tarball'
       get_url:
         url: https://dl.google.com/go/{{golang_version.content}}.linux-amd64.tar.gz
-        checksum: sha256:e54bec97a1a5d230fc2f9ad0880fcbabb5888f30ed9666eca4a91c5a32e86cbc
         dest: /usr/local/src
     - name: '[Golang] Extract'
       unarchive:
