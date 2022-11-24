@@ -15,6 +15,11 @@
     become: false
     local_action: command lsb_release -cs
     register: codename
+  - name: Create temporary directory
+    become: false
+    tempfile:
+      state: directory
+    register: tmp_dir
 
   - block: # Utilities
     - name: '[Utilities] Install'
@@ -117,10 +122,10 @@
     - name: '[Golang] Get tarball'
       get_url:
         url: https://dl.google.com/go/{{golang_version.content}}.linux-amd64.tar.gz
-        dest: /usr/local/src
+        dest: {{tmp_dir.path}}
     - name: '[Golang] Extract'
       unarchive:
-        src: /usr/local/src/{{golang_version.content}}.linux-amd64.tar.gz
+        src: {{tmp_dir.path}}/{{golang_version.content}}.linux-amd64.tar.gz
         copy: no
         dest: /usr/local
     - name: '[Golang] Configure `~/.bashrc`'
@@ -139,12 +144,11 @@
       get_url:
         url: https://sh.rustup.rs
         mode: 0755
-        dest: /tmp/rustup-init
+        dest: {{tmp_dir.path}}/rustup-init
     - name: '[Rust] Install'
       become: false
       command: |
-        /tmp/rustup-init -y &&
-        rm /tmp/rustup-init
+        {{tmp_dir.path}}/rustup-init -y
       args:
         creates: ~/.rustup
     - name: '[Rust] Add to PATH'
@@ -159,7 +163,7 @@
       get_url:
         url: https://github.com/denoland/deno/releases/latest/download/deno-x86_64-unknown-linux-gnu.zip
         mode: 0755
-        dest: /tmp/deno.zip
+        dest: {{tmp_dir.path}}/deno.zip
     - name: '[Deno] Create directory'
       become: false
       file:
@@ -168,7 +172,7 @@
     - name: '[Deno] Extract binary'
       become: false
       unarchive:
-        src: /tmp/deno.zip
+        src: {{tmp_dir.path}}/deno.zip
         dest: ~/.deno/bin
         mode: 0755
     - name: '[Deno] Add to PATH'
@@ -212,3 +216,8 @@
       systemd:
         name: privoxy
         state: restarted
+
+  - name: Clean up
+    file:
+      path: {{tmp_dir}}
+      state: absent
