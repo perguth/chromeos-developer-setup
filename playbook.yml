@@ -125,7 +125,7 @@
         dest: {{tmp_dir.path}}
     - name: '[Golang] Extract'
       unarchive:
-        src: {{tmp_dir.path}}/{{golang_version.content}}.linux-amd64.tar.gz
+        src: '{{tmp_dir.path}}/{{golang_version.content}}.linux-amd64.tar.gz'
         copy: no
         dest: /usr/local
     - name: '[Golang] Configure `~/.bashrc`'
