@@ -122,7 +122,7 @@
     - name: '[Golang] Get tarball'
       get_url:
         url: https://dl.google.com/go/{{golang_version.content}}.linux-amd64.tar.gz
-        dest: {{tmp_dir.path}}
+        dest: '{{tmp_dir.path}}'
     - name: '[Golang] Extract'
       unarchive:
         src: '{{tmp_dir.path}}/{{golang_version.content}}.linux-amd64.tar.gz'
