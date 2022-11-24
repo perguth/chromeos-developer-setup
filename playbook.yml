@@ -27,24 +27,6 @@
     local_action: command lsb_release -cs
     register: codename
 
-  - block: # Configure Git
-    - name: '[Git] Set username'
-      become: false
-      git_config:
-        name: user.name
-        scope: global
-        value: '{{git_username}}'
-    - name: '[Git] Set email'
-      become: false
-      git_config:
-        name: user.email
-        scope: global
-        value: '{{email}}'
-    - name: '[Git] Set password timeout'
-      become: false
-      shell:
-        cmd: git config --global credential.helper cache && git config --global credential.helper 'cache --timeout={{timeout}}'
-
   - block: # Utilities
     - name: '[Utilities] Install'
       apt:
