@@ -1,4 +1,7 @@
 #!/bin/sh
+
+# Clean up
+trap "cd .. && rm -rf chromeos-developer-setup" EXIT
   
 # Temporary bugfix as of `02/28/2020`
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 78BD65473CB3BD13
@@ -14,7 +17,3 @@ cd chromeos-developer-setup
 
 # Run playbook
 ansible-playbook playbook.yml
-
-# Clean up
-cd ..
-rm -rf chromeos-developer-setup
