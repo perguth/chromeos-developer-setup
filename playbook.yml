@@ -4,17 +4,6 @@
   hosts: localhost
   connection: local
 
-  vars_prompt:
-  - name: git_username
-    prompt: '[Git] Set name (leave empty if unchanged)'
-    private: no
-  - name: email
-    prompt: '[Git] Set email'
-    private: no
-  - name: timeout
-    prompt: '[Git] Set password timeout'
-    private: no
-
   become: true
   tasks:
 
