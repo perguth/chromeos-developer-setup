@@ -143,7 +143,7 @@
     - name: '[Rust] Install'
       become: false
       command: |
-        /tmp/rustup-init -y
+        /tmp/rustup-init -y &&
         rm /tmp/rustup-init
       args:
         creates: ~/.rustup
