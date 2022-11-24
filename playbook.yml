@@ -218,5 +218,5 @@
 
   - name: Clean up
     file:
-      path: {{tmp_dir}}
+      path: '{{tmp_dir}}'
       state: absent
