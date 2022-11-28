@@ -11,10 +11,6 @@ It installs and configures:
 - **[Golang](https://golang.org/)**
 - **[Rust](https://www.rust-lang.org/)**
 - **[Deno](https://deno.land/)**
-- **[diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)** to improve `git diff`
-- **[Yggdrasil Network](https://yggdrasil-network.github.io/)** (Not connected to the network. [Public peers](https://github.com/yggdrasil-network/public-peers) can be added manually but [be aware of security implications](https://yggdrasil-network.github.io/faq.html#will-my-machine-be-exposed-to-other-users-of-the-network) if you open local ports for development)
-- A locked down [Privoxy](https://www.privoxy.org/) in order to make the [Yggdrasil browser extension](https://github.com/perguth/yggdrasil-chromeos) work
-
 
 ## Usage
 
