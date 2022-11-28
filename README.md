@@ -20,5 +20,3 @@ It installs:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
 ```
-
-You can now simply **restart Linux** (not Chrome OS) and enjoy ✌️
