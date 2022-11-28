@@ -12,7 +12,7 @@ It installs:
 - **[Rust](https://www.rust-lang.org/)**
 - **[Deno](https://deno.land/)**
 
-## Usage
+## Install
 
 1. **First [`🛠️ enable Linux`](https://support.google.com/chromebook/answer/9145439)**
 1. **Copy** the following commands into **[`🔣 termina`](https://support.google.com/chromebook/thread/565904)**:
