@@ -2,7 +2,7 @@
 
 This will **automatically configure** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)/Pixelbook**.
 
-It installs and configures:
+It installs:
 
 - **Git**
 - **Bash utilities** ([build-essential](https://www.google.com/search?q=build-essential), [htop](https://hisham.hm/htop/), [iperf3](https://iperf.fr/), [mosh](https://mosh.org/), [nano](https://www.nano-editor.org/), [nmap](https://nmap.org/), [nload](https://github.com/rolandriegel/nload), [ufw](https://g.co/kgs/R7KmgH), [screen](https://www.gnu.org/software/screen/), [tmux](https://github.com/tmux/tmux/wiki))
