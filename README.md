@@ -1,6 +1,6 @@
 # Chrome OS developer setup
 
-> This will **automatically configure** the **Linux** on your **[Chromebook](https://www.google.com/chromebook/shop/)/Pixelbook**.
+> Install common developer tools in one command.
 
 It installs:
 
