@@ -24,7 +24,7 @@
   - block: # Utilities
     - name: '[Utilities] Install'
       apt:
-        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux']
+        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux', 'sshfs']
         update_cache: yes
 
   - block: # NodeJS and Yarn
