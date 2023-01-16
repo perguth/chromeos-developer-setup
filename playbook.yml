@@ -34,7 +34,7 @@
         dest: '{{tmp_dir.path}}/microsoft.asc'
     - name: '[VS Code] Dearmor GPG key'
       command:
-        chdir: {{tmp_dir.path}}
+        chdir: '{{tmp_dir.path}}'
         cmd: gpg --dearmor microsoft.asc > packages.microsoft.gpg
         creates: '{{tmp_dir.path}}/packages.microsoft.gpg'
     - name: '[VS Code] Install GPG key'
