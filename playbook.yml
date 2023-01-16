@@ -35,11 +35,11 @@
     - name: '[VS Code] Dearmor GPG key'
       command:
         chdir: '{{tmp_dir.path}}'
-        cmd: gpg --dearmor microsoft.asc > packages.microsoft.gpg
-        creates: packages.microsoft.gpg
+        cmd: gpg --dearmor microsoft.asc
+        creates: microsoft.asc.gpg
     - name: '[VS Code] Install GPG key'
       copy:
-        src: '{{tmp_dir.path}}/packages.microsoft.gpg'
+        src: '{{tmp_dir.path}}/microsoft.asc.gpg'
         dest: /etc/apt/keyrings/packages.microsoft.gpg
         mode: 0644
     - name: '[VS Code] Add reporsitory'
