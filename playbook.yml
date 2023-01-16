@@ -36,7 +36,7 @@
       command:
         chdir: '{{tmp_dir.path}}'
         cmd: gpg --dearmor microsoft.asc > packages.microsoft.gpg
-        creates: '{{tmp_dir.path}}/packages.microsoft.gpg'
+        creates: packages.microsoft.gpg
     - name: '[VS Code] Install GPG key'
       copy:
         src: '{{tmp_dir.path}}/packages.microsoft.gpg'
