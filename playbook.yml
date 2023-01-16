@@ -24,7 +24,30 @@
   - block: # Utilities
     - name: '[Utilities] Install'
       apt:
-        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux', 'sshfs', 'gnome-keyring']
+        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux', 'sshfs']
+        update_cache: yes
+
+  - block: # VS Code
+    - name: '[VS Code] Get GPG key'
+      get_url:
+        url: https://packages.microsoft.com/keys/microsoft.asc
+        dest: '{{tmp_dir.path}}/microsoft.asc'
+    - name: '[VS Code] Dearmor GPG key'
+      command:
+        cmd: 'gpg --dearmor {{tmp_dir.path}}/microsoft.asc > {{tmp_dir.path}}/packages.microsoft.gpg'
+        creates: '{{tmp_dir.path}}/packages.microsoft.gpg'
+    - name: '[VS Code] Install GPG key'
+      copy:
+        src: '{{tmp_dir.path}}/packages.microsoft.gpg'
+        dest: /etc/apt/keyrings/packages.microsoft.gpg
+        mode: 0644
+    - name: '[VS Code] Add reporsitory'
+      apt_repository:
+        repo: deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main
+        filename: vscode
+    - name: '[VS Code] Install'
+      apt:
+        name: ['gnome-keyring', 'code']
         update_cache: yes
 
   - block: # NodeJS and Yarn
