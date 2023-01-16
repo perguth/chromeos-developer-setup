@@ -37,6 +37,10 @@
         chdir: '{{tmp_dir.path}}'
         cmd: gpg --dearmor microsoft.asc
         creates: microsoft.asc.gpg
+    - name: '[VS Code] Ensure key dir exists'
+      file:
+        path: /etc/apt/keyrings
+        state: directory
     - name: '[VS Code] Install GPG key'
       copy:
         src: '{{tmp_dir.path}}/microsoft.asc.gpg'
