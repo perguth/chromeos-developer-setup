@@ -69,14 +69,9 @@
         repo: deb http://deb.nodesource.com/node_16.x {{codename.stdout}} main
         filename: nodesource
         update_cache: no
-    - name: '[NodeJS] Add Yarn repository'
-      apt_repository:
-        repo: deb https://dl.yarnpkg.com/debian stable main
-        filename: yarn
-        update_cache: no
     - name: '[NodeJS] Install'
       apt:
-        name: ['nodejs', 'yarn']
+        name: ['nodejs']
         update_cache: yes
     - name: '[NodeJS] Set package root of NPM to the home directory'
       become: false
@@ -89,7 +84,13 @@
       file:
         path: ~/.npm/lib
         state: directory
-    - name: '[NodeJS] Add NPM and Yarn to PATH'
+    - name: '[NodeJS] Activate Corepack'
+      become: false
+      command: corepack enable
+    - name: '[NodeJS] Activate Yarn'
+      become: false
+      command: corepack prepare yarn@stable --activate
+    - name: '[NodeJS] Add NPM directory to PATH'
       become: false
       lineinfile:
         path: ~/.bashrc
