@@ -84,6 +84,11 @@
         path: ~/.npmrc
         line: prefix = ${HOME}/.npm
         create: yes
+    - name: '[NodeJS] Create directory'
+      become: false
+      file:
+        path: ~/.npm/lib
+        state: directory
     - name: '[NodeJS] Add NPM and Yarn to PATH'
       become: false
       lineinfile:
