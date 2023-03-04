@@ -22,9 +22,9 @@
     register: tmp_dir
 
   - block: # Utilities
-    - name: '[Utilities] Install'
+    - name: '[Utilities / Gimp / Gedit] Install'
       apt:
-        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux', 'sshfs', 'gimp']
+        name: ['build-essential', 'htop', 'iperf3', 'mosh', 'nano', 'nmap', 'nload', 'ufw', 'screen', 'tmux', 'sshfs', 'gimp', 'gedit']
         update_cache: yes
 
   - block: # VS Code
