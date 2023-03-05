@@ -1,4 +1,4 @@
-# Chrome OS developer setup
+# ChromeOS developer setup
 
 > Install common developer tools in one command.
 
