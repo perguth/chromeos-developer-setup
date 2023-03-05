@@ -23,3 +23,7 @@ It installs:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-developer-setup/master/setup.sh)"
 ```
+
+## Related
+
+- [ChromeOS Yggdrasil Network setup](https://github.com/perguth/chromeos-yggdrasil-network-setup)
