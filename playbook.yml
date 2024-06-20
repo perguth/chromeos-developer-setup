@@ -91,6 +91,19 @@
       lineinfile:
         path: ~/.bashrc
         line: export PATH=$HOME/.npm/bin:$PATH
+    - name: '[NodeJS] Install Socket package scanner'
+      become: false
+      command: npm install -g @socketsecurity/cli
+    - name: '[NodeJS] Set NPM alias'
+      become: false
+      lineinfile:
+        path: ~/.bashrc
+        line: alias npm="socket-npm"
+    - name: '[NodeJS] Set NPX alias'
+      become: false
+      lineinfile:
+        path: ~/.bashrc
+        line: alias npx="socket-npx"
 
   - block: # Docker and Docker Compose
     - name: '[Docker] Add Docker GPG key'
