@@ -129,7 +129,7 @@
       register: golang_version
     - name: '[Golang] Get tarball'
       get_url:
-        url: https://go.dev/dl/{{(golang_version.content | splitext)[0]}}.linux-amd64.tar.gz
+        url: 'https://go.dev/dl/{{(golang_version.content | splitext)[0]}}.linux-amd64.tar.gz'
         dest: '{{tmp_dir.path}}'
     - name: '[Golang] Extract'
       unarchive:
