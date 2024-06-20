@@ -27,4 +27,4 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/perguth/chromeos-develop
 ## Related
 
 - [ChromeOS Yggdrasil Network setup](https://github.com/perguth/chromeos-yggdrasil-network-setup)
-- [ChromeOS window manager](https://github.com/JayGoldberg/chromewm) - Tile windows using hotkeys
+- [ChromeOS window manager](https://github.com/JayGoldberg/chromewm): Tile windows using hotkeys
