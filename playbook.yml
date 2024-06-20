@@ -129,11 +129,11 @@
       register: golang_version
     - name: '[Golang] Get tarball'
       get_url:
-        url: https://dl.google.com/go/{{golang_version.content}}.linux-amd64.tar.gz
+        url: https://dl.google.com/go/{{golang_version.content | first}}.linux-amd64.tar.gz
         dest: '{{tmp_dir.path}}'
     - name: '[Golang] Extract'
       unarchive:
-        src: '{{tmp_dir.path}}/{{golang_version.content}}.linux-amd64.tar.gz'
+        src: '{{tmp_dir.path}}/{{golang_version.content | first}}.linux-amd64.tar.gz'
         copy: no
         dest: /usr/local
     - name: '[Golang] Configure `~/.bashrc`'
