@@ -12,6 +12,7 @@ It installs:
 - **[Git](https://git-scm.com/)**: "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency."
 - **[Golang](https://golang.org/)**: "Go is a statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson."
 - **[NodeJS](https://nodejs.org/)**, **[NPM](https://www.npmjs.com/)** and **[Yarn](https://yarnpkg.com/)**: "Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine."
+- **[Socket](https://socket.dev/)**: Will automatically scan packages for maleware that are installed via NPM or NPX.
 - **[Rust](https://www.rust-lang.org/)**: "Rust is blazingly fast and memory-efficient: with no runtime or garbage collector, it can power performance-critical services, run on embedded devices, ..."
 - **[VS Code](https://code.visualstudio.com/)**: "Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications."
 
