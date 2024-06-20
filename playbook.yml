@@ -81,7 +81,7 @@
         path: ~/.npm/lib
         state: directory
     - name: '[NodeJS] Activate Corepack'
-      become: false
+      become: true
       command: corepack enable
     - name: '[NodeJS] Activate Yarn'
       become: false
