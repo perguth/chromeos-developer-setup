@@ -1,6 +1,6 @@
 # ChromeOS developer setup
 
-> Install common developer tools in one command.
+> 💡 Install common developer tools in one command.
 
 It installs:
 
