@@ -104,6 +104,11 @@
       lineinfile:
         path: ~/.bashrc
         line: alias npx="socket-npx"
+    - name: '[NodeJS] Enable auto-completion'
+      become: false
+      lineinfile:
+        path: ~/.bashrc
+        line: $(complete -p npm | sed 's/npm$/socket-npm/')
 
   - block: # Docker and Docker Compose
     - name: '[Docker] Add Docker GPG key'
