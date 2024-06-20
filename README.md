@@ -4,7 +4,7 @@
 
 It installs:
 
-- **Bash utilities** ([build-essential](https://www.google.com/search?q=build-essential), [htop](https://hisham.hm/htop/), [iperf3](https://iperf.fr/), [mosh](https://mosh.org/), [nano](https://www.nano-editor.org/), [nmap](https://nmap.org/), [nload](https://github.com/rolandriegel/nload), [ufw](https://g.co/kgs/R7KmgH), [screen](https://www.gnu.org/software/screen/), [tmux](https://github.com/tmux/tmux/wiki), [sshfs](https://github.com/libfuse/sshfs))
+- **Bash utilities**: [build-essential](https://www.google.com/search?q=build-essential), [htop](https://hisham.hm/htop/), [iperf3](https://iperf.fr/), [mosh](https://mosh.org/), [nano](https://www.nano-editor.org/), [nmap](https://nmap.org/), [nload](https://github.com/rolandriegel/nload), [ufw](https://g.co/kgs/R7KmgH), [screen](https://www.gnu.org/software/screen/), [tmux](https://github.com/tmux/tmux/wiki), [sshfs](https://github.com/libfuse/sshfs).
 - **[Deno](https://deno.land/)**: "Deno is a simple, modern runtime for JavaScript and TypeScript that uses V8 and is built in Rust."
 - **[Docker](https://www.docker.com/)** and **[Docker Compose](https://docs.docker.com/compose/)**: "Docker is a platform designed to help developers build, share, and run modern applications."
 - **[Gedit](https://wiki.gnome.org/Apps/Gedit)**: "Gedit is an easy-to-use and general-purpose text editor."
