@@ -55,7 +55,7 @@
         name: ['gnome-keyring', 'code']
         update_cache: yes
 
-  - block: # NodeJS and Yarn
+  - block: # NodeJS, PNPM and Yarn
     - name: '[NodeJS] Add NodeJS GPG key'
       apt_key:
         url: http://deb.nodesource.com/gpgkey/nodesource.gpg.key
@@ -86,6 +86,9 @@
     - name: '[NodeJS] Activate Yarn'
       become: false
       command: corepack prepare yarn@stable --activate
+    - name: '[NodeJS] Activate PNPM'
+      become: false
+      command: corepack prepare pnpm --activate
     - name: '[NodeJS] Add NPM directory to PATH'
       become: false
       lineinfile:
